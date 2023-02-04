@@ -61,19 +61,58 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   const data = new FormData(form);
-  chatContainer.innerHTML += chatStripe(false, data.get("promt"));
 
+  // console.log({data});
+
+  // user's chatstripe
+  chatContainer.innerHTML += chatStripe(false, data.get("prompt"));
+
+  // to clear the textarea input
   form.reset();
 
+  // bot's chatstripe
   const uniqueId = generateUniqueId();
   chatContainer.innerHTML += chatStripe(true, " ", uniqueId);
 
-  // keepScrollingDown
+  // to focus scroll to the bottom
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
+  // specific message div
   const messageDiv = document.getElementById(uniqueId);
 
+  // messageDiv.innerHTML = "..."
   loader(messageDiv);
+
+  // fetchingDataFromServer
+
+  const response = await fetch("http://localhost:5000/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      prompt: data.get("prompt"),
+    }),
+  });
+
+  clearInterval(loadInterval);
+  // stopTheDotAction
+  messageDiv.innerHTML = "";
+
+  // ifFetchedDataIsOkay
+  // https://developer.mozilla.org/en-US/docs/Web/API/Response/ok
+  if (response.ok) {
+    // actualData/Response
+    const data = await response.json();
+    // parsingData
+    const parseData = data.bot.trim();
+    typeText(messageDiv, parseData);
+  } else {
+    // errorHandling
+    const error = await response.text();
+    messageDiv.innerHTML = "Something went wrong !";
+    alert(error);
+  }
 };
 
 // addEventListenerForSubmitButton
