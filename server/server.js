@@ -15,6 +15,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const PORT = 5001;
+
 app.get("/", async (req, res) => {
   res.status(200).send({
     message: "Hey. It's me, AI running on the backend ... !",
@@ -44,6 +46,6 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.listen(5000, () =>
-  console.log("Server is up and running at http://localhost:5000")
+app.listen(PORT, () =>
+  console.log(`Server is up and running at http://localhost:${PORT}`)
 );
