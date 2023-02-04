@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "server": "nodemon index"
+    "server": "nodemon index.js"
   },
   "type": "module",
   "keywords": [],
