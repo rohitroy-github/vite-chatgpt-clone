@@ -85,15 +85,18 @@ const handleSubmit = async (e) => {
 
   // fetchingDataFromServer
 
-  const response = await fetch("http://localhost:5000/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      prompt: data.get("prompt"),
-    }),
-  });
+  const response = await fetch(
+    "https://vite-chatgpt-api-clone-server.onrender.com/",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt: data.get("prompt"),
+      }),
+    }
+  );
 
   clearInterval(loadInterval);
   // stopTheDotAction
