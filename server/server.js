@@ -23,6 +23,7 @@ app.get("/", async (req, res) => {
   });
 });
 
+// postRequest
 app.post("/", async (req, res) => {
   try {
     const prompt = req.body.prompt;

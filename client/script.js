@@ -20,6 +20,7 @@ function loader(element) {
   }, 300);
 }
 
+// functionToTypeTextByAi
 function typeText(element, text) {
   let index = 0;
 
@@ -33,6 +34,7 @@ function typeText(element, text) {
   }, 20);
 }
 
+// functionToGenerateUID
 function generateUniqueId() {
   const timeStamp = Date.now();
   const randomNumber = Math.random();
@@ -41,6 +43,7 @@ function generateUniqueId() {
   return `id-${timeStamp}-${hexadecimalString}`;
 }
 
+// functionToGenerateChatStripesForUser/Ai
 function chatStripe(isAi, value, uniqueId) {
   return `
     <div class="wrapper ${isAi && "ai"}">
@@ -57,35 +60,45 @@ function chatStripe(isAi, value, uniqueId) {
     `;
 }
 
+// fucntionOnHandleSubmit
 const handleSubmit = async (e) => {
   e.preventDefault();
 
+  // collectingAskedQuestionFromFromData
   const data = new FormData(form);
 
+  // checkingPurpose
   // console.log({data});
 
-  // user's chatstripe
-  chatContainer.innerHTML += chatStripe(false, data.get("prompt"));
+  // generatingUIDForUser
+  const uniqueIdUser = generateUniqueId();
 
-  // to clear the textarea input
+  // user's chatstripe
+  chatContainer.innerHTML += chatStripe(
+    false,
+    data.get("prompt"),
+    uniqueIdUser
+  );
+
+  // clearFormInput
   form.reset();
 
   // bot's chatstripe
-  const uniqueId = generateUniqueId();
-  chatContainer.innerHTML += chatStripe(true, " ", uniqueId);
+  const uniqueIdAi = generateUniqueId();
+  chatContainer.innerHTML += chatStripe(true, "", uniqueIdAi);
 
   // to focus scroll to the bottom
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
   // specific message div
-  const messageDiv = document.getElementById(uniqueId);
+  const messageDiv = document.getElementById(uniqueIdAi);
 
   // messageDiv.innerHTML = "..."
   loader(messageDiv);
 
   // fetchingDataFromServer
-
   const response = await fetch(
+    // provideDeployedServerSideLink
     "https://vite-chatgpt-api-clone-server.onrender.com/",
     {
       method: "POST",
@@ -99,6 +112,7 @@ const handleSubmit = async (e) => {
   );
 
   clearInterval(loadInterval);
+
   // stopTheDotAction
   messageDiv.innerHTML = "";
 
@@ -121,6 +135,7 @@ const handleSubmit = async (e) => {
 // addEventListenerForSubmitButton
 form.addEventListener("submit", handleSubmit);
 
+// addEventListenerForSubmitButtonWRTEnterKey
 form.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) {
     handleSubmit(e);

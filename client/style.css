@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -23,8 +22,9 @@ body {
 }
 
 #chat_container {
+  margin-top: 2%;
   flex: 1;
-  width: 100%;
+  width: 80%;
   height: 100%;
   overflow-y: scroll;
 
@@ -112,16 +112,17 @@ body {
   display: none;
 }
 
-form {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
+.ask-form {
+  width: 80%;
+  /* max-width: 1280px; */
+  margin: 2%;
   padding: 10px;
   background: #40414f;
 
   display: flex;
   flex-direction: row;
   gap: 10px;
+  border-radius: 15px;
 }
 
 textarea {
@@ -132,7 +133,7 @@ textarea {
 
   padding: 10px;
   background: transparent;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
   outline: none;
 }
