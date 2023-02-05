@@ -31,6 +31,19 @@ h2 {
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  .heading {
+    margin: 2%;
+    width: 95%;
+    text-align: center;
+  }
+
+  h2 {
+    color: white;
+    font-size: 15px;
+  }
+}
+
 #chat_container {
   margin-top: 1%;
   flex: 1;
@@ -48,6 +61,12 @@ h2 {
 
   padding-bottom: 20px;
   scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 600px) {
+  #chat_container {
+    width: 95%;
+  }
 }
 
 /* hides scrollbar */
@@ -119,6 +138,12 @@ h2 {
   scrollbar-width: none;
 }
 
+@media only screen and (max-width: 600px) {
+  .message {
+    font-size: 10px;
+  }
+}
+
 /* hides scrollbar */
 .message::-webkit-scrollbar {
   display: none;
@@ -127,7 +152,7 @@ h2 {
 .ask-form {
   width: 80%;
   /* max-width: 1280px; */
-  margin: 1%;
+  margin-bottom: 1%;
   padding: 10px;
   background: #40414f;
 
@@ -139,8 +164,8 @@ h2 {
 
 @media only screen and (max-width: 600px) {
   .ask-form {
-    width: 90%;
-    margin: 1%;
+    width: 95%;
+    margin-bottom: 2%;
     padding: 8px;
     background: #40414f;
 
@@ -155,7 +180,7 @@ textarea {
   width: 100%;
 
   color: #fff;
-  font-size: 18px;
+  font-size: 15px;
 
   padding: 10px;
   background: transparent;
