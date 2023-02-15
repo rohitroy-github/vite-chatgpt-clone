@@ -6,14 +6,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background: #343541;
-}
+/* body {
+} */
 
 #app {
   width: 100vw;
   height: 100vh;
-  background: #343541;
+  /* background-color: #444653; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,35 +21,39 @@ body {
 
 .sideBar {
   display: flex;
+  flex-direction: column;
   position: relative;
   top: 0;
   left: 0;
   height: 100%;
-  width: 15%;
+  width: 18%;
   background-color: #202123;
   /* border-right: 1px solid #ccc; */
-  padding: 10px;
+  padding: 1%;
 }
 
 .mainChatContainer {
+  background-color: #444653;
   display: flex;
+  flex-direction: column;
   position: relative;
   top: 0;
   right: 0;
   height: 100%;
-  width: 85%;
+  width: 82%;
   /* background-color: #f1f1f1; */
   /* border-right: 1px solid #ccc; */
-  padding: 10px;
+  padding: 20px;
 }
 
 .heading {
-  width: 80%;
-  text-align: left;
+  width: 100%;
+  text-align: center;
 }
 
-h2 {
-  margin: 1%;
+.heading p {
+  font-size: 20px;
+  font-weight: 700;
   color: white;
 }
 
@@ -73,7 +76,7 @@ h2 {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-
+  background-color: #444653;
   display: flex;
   flex-direction: column;
   /* gappingBWStripes  */
@@ -100,6 +103,9 @@ h2 {
 .wrapper {
   width: 100%;
   padding: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .ai {
@@ -108,12 +114,13 @@ h2 {
 
 .chat {
   width: 100%;
-  /* max-width: 1280px; */
   margin: 0 auto;
 
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
+
   /* gappingFromProfilePicture&Text */
   gap: 10px;
 }
@@ -175,14 +182,13 @@ h2 {
 .ask-form {
   width: 100%;
   /* max-width: 1280px; */
-  margin-bottom: 1%;
   padding: 10px;
-  background: #40414f;
-
+  background-color: #3f414e;
+  /* margin-bottom: 5px; */
   display: flex;
   flex-direction: row;
   gap: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -190,7 +196,7 @@ h2 {
     width: 95%;
     margin-bottom: 2%;
     padding: 8px;
-    background: #40414f;
+    background: #3f414e;
 
     display: flex;
     flex-direction: row;
@@ -201,10 +207,8 @@ h2 {
 
 textarea {
   width: 100%;
-
   color: #fff;
   font-size: 18px;
-
   padding: 5px;
   background: transparent;
   border-radius: 10px;
@@ -220,6 +224,30 @@ button {
 }
 
 form img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+}
+
+.footer {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer p {
+  position: absolute;
+  bottom: 0;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+}
+
+.github-link {
+  color: inherit;
+  text-decoration: none;
 }
