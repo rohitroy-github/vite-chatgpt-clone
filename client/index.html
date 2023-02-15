@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,6 +22,42 @@
         ></textarea>
         <button type="submit"><img src="/assets/send.svg" /></button>
       </form>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- <div class="container"> -->
+      <div class="sideBar">
+        <div class="heading">
+          <h2>Let's talk with AI ... ?</h2>
+        </div>
+      </div>
+
+      <div class="mainChatContainer">
+        <div id="chat_container"></div>
+        <form class="ask-form">
+          <textarea
+            name="prompt"
+            rows="1"
+            cols="1"
+            placeholder="Just ask ... ?"
+          ></textarea>
+          <button type="submit"><img src="/assets/send.svg" /></button>
+        </form>
+      </div>
+      <!-- </div> -->
     </div>
     <script type="module" src="script.js"></script>
   </body>
