@@ -76,7 +76,7 @@ h2 {
 
 .wrapper {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
 }
 
 .ai {
@@ -92,12 +92,12 @@ h2 {
   flex-direction: row;
   align-items: flex-start;
   /* gappingFromProfilePicture&Text */
-  gap: 15px;
+  gap: 10px;
 }
 
 .profile {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border-radius: 5px;
 
   background: #5436da;
@@ -121,7 +121,7 @@ h2 {
   flex: 1;
 
   color: #dcdcdc;
-  font-size: 20px;
+  font-size: 18px;
 
   max-width: 100%;
   overflow-x: scroll;
@@ -180,9 +180,9 @@ textarea {
   width: 100%;
 
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
 
-  padding: 10px;
+  padding: 5px;
   background: transparent;
   border-radius: 10px;
   border: none;
