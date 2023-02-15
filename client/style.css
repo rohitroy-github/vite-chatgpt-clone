@@ -28,8 +28,35 @@
   height: 100%;
   width: 18%;
   background-color: #202123;
-  /* border-right: 1px solid #ccc; */
+  justify-content: center;
+  text-align: center;
   padding: 1%;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+}
+
+.heading p {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.newChatButton {
+  font-size: 16px;
+  width: 80%;
+  margin: 20px auto;
+  padding: 5px;
+  position: relative;
+  display: flex; /* Use flexbox to align content */
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start;
+  text-align: center;
+  color: white;
+  background-color: #202123;
+  border: 2px solid white;
 }
 
 .mainChatContainer {
@@ -44,17 +71,6 @@
   /* background-color: #f1f1f1; */
   /* border-right: 1px solid #ccc; */
   padding: 20px;
-}
-
-.heading {
-  width: 100%;
-  text-align: center;
-}
-
-.heading p {
-  font-size: 20px;
-  font-weight: 700;
-  color: white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -216,11 +232,17 @@ textarea {
   outline: none;
 }
 
-button {
-  outline: 0;
-  border: 0;
+.submitBtn {
+  /* outline: 0; */
+  border: none;
   cursor: pointer;
-  background: transparent;
+  background-color: #3f414e;
+  padding: 6px;
+}
+
+.submitBtn:hover {
+  background-color: black;
+  border-radius: 10px;
 }
 
 form img {

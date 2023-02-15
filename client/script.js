@@ -5,6 +5,7 @@ import user from "./assets/user.svg";
 
 const form = document.querySelector("form");
 const chatContainer = document.querySelector("#chat_container");
+const newChatButton = document.getElementById("newChatButton");
 
 let loadInterval;
 
@@ -141,3 +142,9 @@ form.addEventListener("keyup", (e) => {
     handleSubmit(e);
   }
 });
+
+newChatButton.addEventListener("click", resetContainers);
+
+const resetContainers = () => {
+  form.reset();
+};

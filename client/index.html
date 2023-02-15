@@ -35,6 +35,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div id="app">
@@ -43,6 +47,8 @@
         <div class="heading">
           <p>Let's chat with AI ... ?</p>
         </div>
+
+        <div class="newChatButton">+ New Chat</div>
 
         <div class="footer">
           <p>
@@ -65,7 +71,10 @@
             cols="1"
             placeholder="Just ask ... ?"
           ></textarea>
-          <button type="submit"><img src="/assets/send.svg" /></button>
+          <button type="submit" class="submitBtn">
+            <i class="fa fa-send-o" style="font-size: 18px; color: white"></i>
+          </button>
+          <!-- <button type="submit"><img src="/assets/send.svg" /></button> -->
         </form>
       </div>
       <!-- </div> -->
