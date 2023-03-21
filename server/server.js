@@ -48,5 +48,5 @@ app.post("/", async (req, res) => {
 });
 
 app.listen(PORT, () =>
-  console.log(`Server is up and running at http://localhost:${PORT}`)
+  console.log(`Server is up and running at : http://localhost:${PORT}`)
 );
