@@ -100,7 +100,7 @@ const handleSubmit = async (e) => {
   // fetchingDataFromServer
   const response = await fetch(
     // provideDeployedServerSideLink
-    "https://vite-chatgpt-api-clone-server.onrender.com/",
+    "http://localhost:5000",
     {
       method: "POST",
       headers: {
