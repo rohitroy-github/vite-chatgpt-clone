@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 5002;
 
 app.get("/", async (req, res) => {
   res.status(200).send({
-    message: "Hey. It's me, AI running on the backend ... !",
+    message: "Backend server for vite-chatgpt-clone is running here !",
   });
 });
 
