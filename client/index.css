@@ -30,7 +30,7 @@
   background-color: #202123;
   justify-content: center;
   text-align: center;
-  padding: 1%;
+  padding: 20px;
 }
 
 .heading {
@@ -264,9 +264,10 @@ form img {
 .footer p {
   position: absolute;
   bottom: 0;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   color: white;
+  padding-bottom: 20px;
 }
 
 .github-link {

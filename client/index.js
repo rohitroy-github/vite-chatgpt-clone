@@ -69,7 +69,7 @@ const handleSubmit = async (e) => {
   const data = new FormData(form);
 
   // checkingPurpose
-  // console.log({data});
+  console.log({data});
 
   // generatingUIDForUser
   const uniqueIdUser = generateUniqueId();
@@ -100,9 +100,8 @@ const handleSubmit = async (e) => {
   // fetchingDataFromServer
   const response = await fetch(
     // provideDeployedServerSideLink
-    // "http://localhost:5000",
+    // "http://localhost:5000/",
     "https://vite-chatgpt-clone-server.vercel.app/",
-
     {
       method: "POST",
       headers: {

@@ -19,7 +19,8 @@ const PORT = process.env.PORT || 5002;
 
 app.get("/", async (req, res) => {
   res.status(200).send({
-    message: "Backend server for vite-chatgpt-clone is running here !",
+    message:
+      "Backend server for Rohit Roy's vite-chatgpt-clone is running here !",
   });
 });
 
