@@ -100,8 +100,8 @@ const handleSubmit = async (e) => {
   // fetchingDataFromServer
   const response = await fetch(
     // provideDeployedServerSideLink
-    // "http://localhost:5000/",
-    "https://vite-chatgpt-clone-server.vercel.app/",
+    "http://localhost:5000/",
+    // "https://vite-chatgpt-clone-server.vercel.app/",
     {
       method: "POST",
       headers: {
