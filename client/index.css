@@ -105,12 +105,6 @@
   scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 600px) {
-  #chat_container {
-    width: 95%;
-  }
-}
-
 /* hides scrollbar */
 #chat_container::-webkit-scrollbar {
   display: none;
@@ -184,12 +178,6 @@
   scrollbar-width: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .message {
-    font-size: 10px;
-  }
-}
-
 /* hides scrollbar */
 .message::-webkit-scrollbar {
   display: none;
@@ -205,20 +193,6 @@
   flex-direction: row;
   gap: 10px;
   border-radius: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-  .ask-form {
-    width: 95%;
-    margin-bottom: 2%;
-    padding: 8px;
-    background: #3f414e;
-
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    border-radius: 10px;
-  }
 }
 
 textarea {
@@ -273,4 +247,33 @@ form img {
 .github-link {
   color: inherit;
   text-decoration: none;
+}
+
+/* styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  .sideBar {
+    display: none;
+  }
+
+  .mainChatContainer {
+    width: 100%;
+    padding: 25px;
+    margin: 0;
+  }
+
+  textarea {
+    font-size: 15px;
+  }
+
+  .message {
+    font-size: 15px;
+  }
+
+  .ask-form {
+    padding: 8px;
+  }
+
+  .wrapper {
+    padding: 8px;
+  }
 }
