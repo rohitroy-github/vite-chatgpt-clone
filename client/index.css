@@ -253,7 +253,18 @@ form img {
 }
 
 /* styles for screens smaller than 768px */
+@media (min-width: 768px) {
+  .mobileFooter {
+    display: none;
+  }
+}
+
+/* styles for screens smaller than 768px */
 @media (max-width: 768px) {
+  #app {
+    flex-direction: column;
+  }
+
   .sideBar {
     display: none;
   }
@@ -278,5 +289,16 @@ form img {
 
   .wrapper {
     padding: 8px;
+  }
+
+  .mobileFooter {
+    display: block;
+    background-color: #444653;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    width: 100%;
+    color: white;
+    font-size: 10px;
   }
 }
