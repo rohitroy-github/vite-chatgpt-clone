@@ -273,6 +273,7 @@ form img {
     width: 100%;
     padding: 25px;
     margin: 0;
+    border: 5px solid black;
   }
 
   textarea {
@@ -297,7 +298,7 @@ form img {
     justify-content: center;
     text-align: center;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 25px;
     color: white;
     font-size: 12px;
   }
